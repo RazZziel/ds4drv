@@ -1,0 +1,14 @@
+[Unit]
+Description=DualShock 4 Bluetooth headphone audio sink
+# Needs the PulseAudio/PipeWire session and BlueZ-connected controller.
+After=pipewire-pulse.service pulseaudio.service
+
+[Service]
+Type=exec
+ExecStart=%h/dev/ds4drv/ds4btaudio.py --wait
+Restart=on-failure
+RestartSec=5
+Nice=-10
+
+[Install]
+WantedBy=default.target
