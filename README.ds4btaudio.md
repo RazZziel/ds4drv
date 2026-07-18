@@ -52,6 +52,9 @@ single app's stream to it.
     systemctl --user daemon-reload
     systemctl --user enable --now ds4btaudio
 
+The unit expects the repo at `~/dev/ds4drv`; adjust `ExecStart` if you cloned
+it somewhere else.
+
 The sink appears whenever a DS4 is connected; it goes away (and the service
 keeps waiting) when the controller sleeps.
 

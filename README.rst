@@ -2,6 +2,20 @@
 ds4drv
 ======
 
+.. note::
+
+   **This fork: DualShock 4 as a Bluetooth audio sink.** The main addition of
+   this fork is `ds4btaudio <README.ds4btaudio.md>`_, a standalone, pure-Python
+   daemon that streams audio to the headphone jack of a Bluetooth-connected
+   DS4 (PS4-style), while coexisting with BlueZ and the kernel
+   ``hid-playstation`` driver — pairing, input, LED and rumble keep working
+   untouched. It does not need ds4drv itself, nor root, nor compilation.
+   See `README.ds4btaudio.md <README.ds4btaudio.md>`_ for details.
+
+   The rest of this README describes the original (unmaintained, 2016-era)
+   ds4drv project, kept as-is, including poconbhui's experimental ``add-audio``
+   work that ``ds4btaudio`` supersedes.
+
 ds4drv is a Sony DualShock 4 userspace driver for Linux.
 
 * Discussions: https://groups.google.com/forum/#!forum/ds4drv
